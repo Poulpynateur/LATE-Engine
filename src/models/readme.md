@@ -1,1 +1,0 @@
-Describe interaction between objects
