@@ -24,16 +24,13 @@
     <ClCompile Include="src\game\Game.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\models\basic\EntityGroup.cpp">
+    <ClCompile Include="src\game\World.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\models\basic\EntitySpammer.cpp">
+    <ClCompile Include="src\game\objects\ParticleManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\models\Particles\Particle.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="src\models\Particles\ParticleManager.cpp">
+    <ClCompile Include="src\game\objects\Particle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -59,10 +56,16 @@
     <ClInclude Include="src\models\basic\EntitySpammer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\models\Particles\Particle.h">
+    <ClInclude Include="src\game\World.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\models\Particles\ParticleManager.h">
+    <ClInclude Include="src\game\objects\ParticleManager.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\objects\Particle.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\models\basic\EntityLifeTime.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

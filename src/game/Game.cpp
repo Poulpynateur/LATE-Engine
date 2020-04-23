@@ -3,6 +3,5 @@
 
 void Game::start()
 {
-	world->addChildren(new EntitySpammer());
 	engine->mainLoop(world);
 }

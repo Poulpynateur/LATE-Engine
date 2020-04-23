@@ -2,13 +2,13 @@
 
 #include "../engine/EngineCore.h"
 #include "../engine/Config.h"
-#include "../models/basic/EntityGroup.h"
+#include "World.h"
 
 class Game {
 private:
 
 	EngineCore* engine = new EngineCore(Config());
-	EntityGroup* world = new EntityGroup();
+	World* world = new World();
 
 public:
 	~Game() { delete engine; delete world; }
