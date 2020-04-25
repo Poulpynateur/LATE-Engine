@@ -15,9 +15,13 @@ public:
 		childrens.clear();
 	}
 
+	virtual void updateChildren(Children* _children, const sf::Int32& _elapsedTime, const Inputs& _inputs) {
+		_children->update(_elapsedTime, _inputs);
+	}
+
 	virtual void update(const sf::Int32& _elapsedTime, const Inputs& _inputs) override {
 		for (unsigned int i = 0; i < childrens.size(); i++) {
-			childrens[i]->update(_elapsedTime, _inputs);
+			updateChildren(childrens[i], _elapsedTime, _inputs);
 		}
 		childrens.erase(
 			std::remove_if(

@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../../engine/BaseEntity.h"
+#include "../../models/physics/PhysicEntity.h"
 #include "../../models/basic/EntityLifeTime.h"
 
-class Particle : public BaseEntity, public EntityLifeTime {
+class Particle : public PhysicEntity, public EntityLifeTime {
 
-	int size = 50;
+	float size = 50;
 
 	int previousSize = 50;
 	int actualSize = 50;
@@ -13,11 +13,14 @@ class Particle : public BaseEntity, public EntityLifeTime {
 	sf::CircleShape shape;
 
 public:
-
-	Particle(sf::Vector2f _pos, sf::Int32 _creationTime) : shape(sf::CircleShape(size)), EntityLifeTime(500, _creationTime) {
+	// Why is it fine to use 'size' to inti 'shape' but not 'PhysicEntity'
+	Particle(sf::Vector2f _pos, sf::Int32 _creationTime) : shape(sf::CircleShape(size)), EntityLifeTime(500, _creationTime), PhysicEntity(_pos, 50) {
 		shape.setPosition(_pos);
 	}
 
 	void update(const sf::Int32& _elapsedTime, const Inputs& _inputs) override;
 	void draw(sf::RenderWindow& _render, float _interpolation) override;
+
+	virtual void onCollision() override;
+	virtual void noCollision() override;
 };
