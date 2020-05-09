@@ -2,8 +2,12 @@
 
 void EngineCore::handleInputs() {
 	if (window.hasFocus()) {
-		inputs.mouseDown = sf::Mouse::isButtonPressed(sf::Mouse::Left);
 		inputs.mousePos = sf::Vector2f(sf::Mouse::getPosition(window));
+		inputs.isTriggered[InputsList::MOUSE_DOWN] = sf::Mouse::isButtonPressed(sf::Mouse::Left);
+		inputs.isTriggered[InputsList::ARROW_UP] = sf::Keyboard::isKeyPressed(sf::Keyboard::Up);
+		inputs.isTriggered[InputsList::ARROW_DOWN] = sf::Keyboard::isKeyPressed(sf::Keyboard::Down);
+		inputs.isTriggered[InputsList::ARROW_LEFT] = sf::Keyboard::isKeyPressed(sf::Keyboard::Left);
+		inputs.isTriggered[InputsList::ARROW_RIGHT] = sf::Keyboard::isKeyPressed(sf::Keyboard::Right);
 	}
 }
 
@@ -18,11 +22,9 @@ void EngineCore::handleRender(BaseEntity* world, float interpolation){
 }
 
 void EngineCore::mainLoop(BaseEntity* world) {
-	double next_update_time = clock.getElapsedTime().asMilliseconds();
+	sf::Int32 next_update_time = clock.getElapsedTime().asMilliseconds();
 	int update_number;
 	float interpolation;
-
-	float interpo_time_elapsed;
 
 	while (window.isOpen()) {
 
@@ -36,8 +38,7 @@ void EngineCore::mainLoop(BaseEntity* world) {
 			update_number++;
 		}
 
-		interpo_time_elapsed = clock.getElapsedTime().asMilliseconds() + UPDATE_INTERVAL - next_update_time;
-		interpolation = interpo_time_elapsed / UPDATE_INTERVAL;
+		interpolation = (clock.getElapsedTime().asMilliseconds() + UPDATE_INTERVAL - next_update_time) / (float)UPDATE_INTERVAL;
 
 		handleRender(world, interpolation);
 	}

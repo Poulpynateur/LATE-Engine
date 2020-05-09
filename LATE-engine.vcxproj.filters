@@ -27,13 +27,13 @@
     <ClCompile Include="src\game\World.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\objects\ParticleManager.cpp">
+    <ClCompile Include="src\game\objects\Spaceship.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\game\objects\Particle.cpp">
+    <ClCompile Include="src\game\objects\Asteroid.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="src\models\physics\PhysicManager.cpp">
+    <ClCompile Include="src\models\DynamicEntity.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -53,28 +53,25 @@
     <ClInclude Include="src\game\Game.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\models\basic\EntityGroup.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="src\models\basic\EntitySpammer.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="src\game\World.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\game\objects\ParticleManager.h">
+    <ClInclude Include="src\game\objects\Spaceship.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\game\objects\Particle.h">
+    <ClInclude Include="src\game\objects\Asteroid.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\models\basic\EntityGroup.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="src\models\basic\EntityLifeTime.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\models\physics\PhysicManager.h">
+    <ClInclude Include="src\models\basic\EntitySpammer.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
-    <ClInclude Include="src\models\physics\PhysicEntity.h">
+    <ClInclude Include="src\models\DynamicEntity.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>

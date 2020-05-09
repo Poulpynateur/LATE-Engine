@@ -21,11 +21,11 @@
   <ItemGroup>
     <ClCompile Include="src\engine\EngineCore.cpp" />
     <ClCompile Include="src\game\Game.cpp" />
-    <ClCompile Include="src\game\objects\Particle.cpp" />
-    <ClCompile Include="src\game\objects\ParticleManager.cpp" />
+    <ClCompile Include="src\game\objects\Asteroid.cpp" />
+    <ClCompile Include="src\game\objects\Spaceship.cpp" />
     <ClCompile Include="src\game\World.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\models\physics\PhysicManager.cpp" />
+    <ClCompile Include="src\models\DynamicEntity.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine\BaseEntity.h" />
@@ -33,14 +33,13 @@
     <ClInclude Include="src\engine\EngineCore.h" />
     <ClInclude Include="src\engine\Inputs.h" />
     <ClInclude Include="src\game\Game.h" />
-    <ClInclude Include="src\game\objects\Particle.h" />
-    <ClInclude Include="src\game\objects\ParticleManager.h" />
+    <ClInclude Include="src\game\objects\Asteroid.h" />
+    <ClInclude Include="src\game\objects\Spaceship.h" />
     <ClInclude Include="src\game\World.h" />
     <ClInclude Include="src\models\basic\EntityGroup.h" />
     <ClInclude Include="src\models\basic\EntityLifeTime.h" />
-    <ClInclude Include="src\models\physics\PhysicEntity.h" />
     <ClInclude Include="src\models\basic\EntitySpammer.h" />
-    <ClInclude Include="src\models\physics\PhysicManager.h" />
+    <ClInclude Include="src\models\DynamicEntity.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -131,12 +130,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\TheLaw\Documents\Programmation\CPP\lib\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\TheLaw\Documents\data\perso\programmation\CPP\lib\SFML-2.5.1\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\TheLaw\Documents\Programmation\CPP\lib\SFML-2.5.1\lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\TheLaw\Documents\data\perso\programmation\CPP\lib\SFML-2.5.1\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

@@ -5,7 +5,7 @@
 #include "Config.h"
 #include "Inputs.h"
 
-constexpr int UPDATE_PER_SECOND = 25;
+constexpr int UPDATE_PER_SECOND = 30;
 constexpr int UPDATE_INTERVAL = 1000 / UPDATE_PER_SECOND;
 constexpr int MAX_UPDATES = 5;
 
